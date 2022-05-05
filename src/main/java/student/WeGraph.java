@@ -135,8 +135,10 @@ public class WeGraph {
     
     public static void main(String args[]) {
     	WeGraph D;
-    	if (args.length != 0)
+    	if (args.length == 2)
     		D = new WeGraph(Integer.parseInt(args[0]), Integer.parseInt(args[1]));
+    	else if (args.length >= 3)
+    		D = new WeGraph(Integer.parseInt(args[0]), Integer.parseInt(args[1]), args[2]);
     	else
     		D = new WeGraph(6, 30);
     	System.out.print(D.toFileFormat());

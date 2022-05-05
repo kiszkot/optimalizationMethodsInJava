@@ -7,7 +7,8 @@ public class Main {
 	
 	private static final String[] tests = {
 			"GraphTest",
-			"DiaGraphTest"
+			"DiaGraphTest",
+			"WeGraph"
 	};
 	
 	private static void printTests() {
@@ -18,7 +19,7 @@ public class Main {
 	public static void main(String[] args) {
 		
 		int c;
-		String[] argz = new String[1];
+		String[] argz = new String[3];
 		if(args.length == 0) {
 			System.out.printf("Please specify argument from 0 to %d\n", tests.length);
 			printTests();
@@ -34,6 +35,15 @@ public class Main {
 			case 1:
 				argz[0] = args[1];
 				DiaGraphTest.main(argz);
+				break;
+			case 2:
+				if (args.length >= 4) {
+					argz[0] = args[1];
+					argz[1] = args[2];
+					argz[2] = args[3];
+					WeGraph.main(argz);
+				} else
+					return;
 			}
 		}
 		
