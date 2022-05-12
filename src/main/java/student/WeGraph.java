@@ -86,6 +86,10 @@ public class WeGraph {
     	return adj.get(v);
     }
     
+    public ArrayList<ArrayList<Edge>> edges() {
+    	return adj;
+    }
+    
     public void addEdge(Edge edge) {
     	int from = edge.either();
     	int to = edge.other(from);

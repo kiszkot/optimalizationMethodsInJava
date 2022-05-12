@@ -8,7 +8,8 @@ public class Main {
 	private static final String[] tests = {
 			"GraphTest",
 			"DiaGraphTest",
-			"WeGraph"
+			"WeGraph",
+			"LazyPrimMST"
 	};
 	
 	private static void printTests() {
@@ -44,6 +45,9 @@ public class Main {
 					WeGraph.main(argz);
 				} else
 					return;
+			case 3:
+				argz[0] = args[1];
+				LazyPrimMST.main(argz);
 			}
 		}
 		

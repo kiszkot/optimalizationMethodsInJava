@@ -1,6 +1,6 @@
 package student;
 
-public class Edge {
+public class Edge implements Comparable<Edge>{
 	
 	private final int from;
 	private final int to;
@@ -34,6 +34,11 @@ public class Edge {
 		return String.format("%d %d %.3f", from, to, weight);
 	}
 	
+	@Override
+	public int compareTo(Edge e) {
+		return Double.compare(this.weight, e.weight);
+	}
+	
 	public boolean isEqual(Edge edge) {
 		if (this.from == edge.from && this.to == edge.to && this.weight == edge.weight)
 			return true;
@@ -54,5 +59,7 @@ public class Edge {
 			return true;
 		return false;
 	}
+	
+	
 
 }
