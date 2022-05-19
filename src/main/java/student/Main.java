@@ -9,7 +9,8 @@ public class Main {
 			"GraphTest",
 			"DiaGraphTest",
 			"WeGraph",
-			"LazyPrimMST"
+			"LazyPrimMST",
+			"ShortestPathTest"
 	};
 	
 	private static void printTests() {
@@ -48,6 +49,11 @@ public class Main {
 			case 3:
 				argz[0] = args[1];
 				LazyPrimMST.main(argz);
+			case 4:
+				argz[0] = args[1];
+				argz[1] = args[2];
+				argz[2] = args[3];
+				ShortestPathTest.main(argz);
 			}
 		}
 		
